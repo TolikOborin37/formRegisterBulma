@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bulma.min.css">
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="jquery-3.6.1.min.js"></script>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Форма регистрации</title>
+        
+        
+    </head>
+
+    <body>
+        <div class="container column is-three-fifths has-background-light">
+
+            <!-- Контейнер регистрации-->
+            <div class="container">
+                <div class="container">
+                    <label class="label is-size-2 has-text-centered">Регистрация на сайте по продаже автозапчастей</label>
+                </div>
+                <div class="field is-horizontal">
+                    <label class="label">Регистрация</label>
+                </div>
+                <br>
+                <div class="columns">
+                    <div class="column is-1"></div>
+                    <div class="column field">
+                        <label class="label">Вы регистрируетесь как</label>
+                        <label class="label">
+                            <input type="radio" name="userRegister" id="checkedByuer" checked>
+                            Покупатель
+                        </label>
+                        <label class="label">
+                            <input type="radio" name="userRegister">
+                            Поставщик
+                        </label>
+                    </div>
+                    
+                </div>
+
+                    <br><br>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field field-label">
+                        <label>Эл. почта</label>
+                    </div>
+                    <div class="column is-5 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                
+                </div>
+            <!-- Контейнер Название организации-->
+            <div class="container">
+                <div class="field is-horizontal">
+                    <label class="label">Название организации</label>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field field-label">
+                        <label>ИП или Юр.лицо</label>
+                    </div>
+                    <div class="column is-5 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field field-label">
+                        <label>ИНН</label>
+                    </div>
+                    <div class="column is-5 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- Контейнер Фактический адрес-->
+            <div class="container">
+                <div class="field is-horizontal">
+                    <label class="label">Фактический адрес</label>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field field-label">
+                        <label>Ваш город</label>
+                    </div>
+                    <div class="column is-5 field field-body">
+                        <input class="input" type="text"> 
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field field-label">
+                        <label>Улица</label>
+                    </div>
+                    <div class="column is-3 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                    <div class="column is-1 field field-label">
+                        <label>Дом/стр.</label>
+                    </div>
+                    <div class="column is-2 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                    <div class="column is-1 field field-label">
+                        <label>Офис</label>
+                    </div>
+                    <div class="column is-1 field field-body">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+               <div class="columns field is-horizontal">
+                <div class="column is-2 field-label">
+                    <label>Телефон</label>
+                </div>
+                <div class="column is-5 field-body">
+                    <div class="field is-expanded">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a class="button is-static">
+                                    +7
+                                </a>
+                            </p>
+                            <p class="control is-expanded">
+                                <input class="input" type="tel">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="columns field is-horizontal" id="idHiddenBuyer">
+                <div class="column is-2 field field-label">
+                    <label>Сайт вашей компании</label>
+                </div>
+                <div class="column is-5 field field-body">
+                    <input class="input" type="text">
+                </div>
+               </div>
+            </div>
+            <br>
+            <!-- Контейнер Вид деятельности-->
+            <div class="container">
+                <div class="field is-horizontal">
+                    <label class="label">Вид деятельности</label>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label>Магазин</label>
+                    </div>
+                    <div class="column field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label> Региональная сеть магазинов</label>
+                    </div>
+                    <div class="column field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label>Федеральная сеть магазинов</label>
+                    </div>
+                    <div class="column field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label> Интернет-магазин</label>
+                    </div>
+                    <div class="column field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label> Автосервис</label>
+                    </div>
+                    <div class="column field-body">
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns  field is-horizontal">
+                    <div class="column is-2 field-label">
+                        <label> Прочее</label>
+                    </div>
+                    <div class="column is-5 field-body">
+                        <div class="field">
+                            <div class="control">
+                                    <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <br>
+            <!-- Капча-->
+            <div class="container">
+                <div class="columns field">
+                    <div class="column is-3 field"></div>
+                    <div class="column field">
+                        <div class="g-recaptcha" data-sitekey="0000000000000000000000" style="margin-bottom:1em";></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <button class="button is-info" id="buttonRegister">Отправить заявку</button>
+        </div>
+        
+        <!-- Модальное окно-->
+        <div class="modal" id="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <label>Вы успешно подали заявку</label>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close" id="buttonModalClose"></button>
+          </div>
+
+          <script>
+            //функция на отображения поля "сайт компании" в зависимости от выбранного регистрирующего пользователя
+            $(function(){
+                if($("#checkedByuer").is(":checked")) {
+                    $("#idHiddenBuyer").hide();
+                    };
+                $("input[name=userRegister]:radio").change(function() {
+                    if($("#checkedByuer").is(":checked")) {
+                        $("#idHiddenBuyer").hide();
+                    } else {
+                        $("#idHiddenBuyer").show();
+                    };
+                });
+            });
+
+            //отображение модального окна с помощью добавления в класс атрибута "is-active"
+            $(function() {
+                $("#buttonRegister").click(function() {
+                    $("#modal").addClass("is-active");
+                });
+            });
+
+            //выход из модального окна по нажатию на крестик из модального окна, с помощью удаление из класса атрибута is-active
+            $(function() {
+                $("#buttonModalClose").click(function() {
+                    $("#modal").removeClass("is-active");
+                });
+            });
+        </script>
+    </body>
+</html>
+
